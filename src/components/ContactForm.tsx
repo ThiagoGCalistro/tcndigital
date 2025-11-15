@@ -24,7 +24,7 @@ export const ContactForm = () => {
     e.preventDefault();
     
     // Validação básica
-    if (!formData.name || !formData.email || !formData.phone || !formData.serviceType) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.serviceType || !formData.urgency || !formData.hasDomain || !formData.description) {
       toast({
         title: "Campos obrigatórios",
         description: "Por favor, preencha todos os campos obrigatórios.",
@@ -55,21 +55,21 @@ ${formData.references || "Nenhuma referência fornecida"}`;
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Link do email
-    const emailSubject = `Solicitação de Orçamento - ${formData.name}`;
-    const emailBody = message.replace(/\*/g, ''); // Remove markdown do email
-    const mailtoLink = `mailto:tgcalistro@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    //const emailSubject = `Solicitação de Orçamento - ${formData.name}`;
+   //const emailBody = message.replace(/\*/g, ''); // Remove markdown do email
+    //const mailtoLink = `mailto:tgcalistro@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     // Abrir WhatsApp
     window.open(whatsappLink, '_blank');
     
     // Abrir cliente de email
-    setTimeout(() => {
-      window.location.href = mailtoLink;
-    }, 500);
+    //setTimeout(() => {
+    //  window.location.href = mailtoLink;
+    //}, 500);
 
     toast({
       title: "Redirecionando...",
-      description: "Você será direcionado para o WhatsApp e seu cliente de email.",
+      description: "Você será direcionado para o WhatsApp.",
     });
 
     // Reset form
@@ -239,7 +239,7 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                     <Phone className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-medium">Telefone</p>
-                      <p className="text-sm text-muted-foreground">(11) 99999-9999</p>
+                      <p className="text-sm text-muted-foreground">(14) 99706-2245</p>
                     </div>
                   </div>
 
@@ -247,7 +247,7 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                     <MapPin className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-medium">Endereço</p>
-                      <p className="text-sm text-muted-foreground">São Paulo, SP - Brasil</p>
+                      <p className="text-sm text-muted-foreground">Piraju, SP - Brasil</p>
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ ${formData.references || "Nenhuma referência fornecida"}`;
               <div className="bg-primary/10 p-6 rounded-lg border border-primary/20">
                 <h3 className="text-lg font-bold mb-2 text-primary">Resposta Rápida</h3>
                 <p className="text-sm text-foreground">
-                  Respondemos todas as solicitações em até 24 horas úteis. Para urgências, entre em contato via WhatsApp.
+                  Respondemos todas as solicitações em até 24 horas úteis, contato via WhatsApp.
                 </p>
               </div>
             </div>
