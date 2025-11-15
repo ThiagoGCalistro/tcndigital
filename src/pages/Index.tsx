@@ -13,7 +13,7 @@ const Index = () => {
     });
   };
   return <div className="min-h-screen">
-      <Header onQuoteClick={scrollToContact} />
+      <Header onQuoteClick={scrollToContact} className="bg-white rounded-none" />
       <Hero onQuoteClick={scrollToContact} />
       <Clients />
       <Portfolio />
