@@ -23,7 +23,7 @@ export const CTA = ({ onQuoteClick }: CTAProps) => {
             {[
               "Sites responsivos e modernos",
               "SEO otimizado para Google",
-              "Suporte técnico incluso"
+              "Páginas de alta conversão"
             ].map((benefit, index) => (
               <div key={index} className="flex items-center justify-center gap-2 text-primary-foreground">
                 <CheckCircle2 className="h-5 w-5 flex-shrink-0" />
