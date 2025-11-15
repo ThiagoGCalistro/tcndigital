@@ -6,15 +6,14 @@ import { CTA } from "@/components/CTA";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
-
 const Index = () => {
   const scrollToContact = () => {
-    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contato')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen">
-      <Header onQuoteClick={scrollToContact} />
+  return <div className="min-h-screen">
+      <Header onQuoteClick={scrollToContact} className="bg-slate-50" />
       <Hero onQuoteClick={scrollToContact} />
       <Clients />
       <Portfolio />
@@ -22,8 +21,6 @@ const Index = () => {
       <Testimonials />
       <ContactForm />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
