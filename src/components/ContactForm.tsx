@@ -33,9 +33,43 @@ export const ContactForm = () => {
       return;
     }
 
+    // Construir mensagem formatada
+    const message = `*Nova Solicitação de Orçamento - TCN Digital*
+
+*Nome:* ${formData.name}
+*E-mail:* ${formData.email}
+*Telefone:* ${formData.phone}
+
+*Tipo de Serviço:* ${formData.serviceType}
+*Urgência:* ${formData.urgency || "Não especificada"}
+*Possui Domínio/Hospedagem:* ${formData.hasDomain || "Não especificado"}
+
+*Descrição do Projeto:*
+${formData.description || "Não fornecida"}
+
+*Referências:*
+${formData.references || "Nenhuma referência fornecida"}`;
+
+    // Link do WhatsApp
+    const whatsappNumber = "5514997062245";
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Link do email
+    const emailSubject = `Solicitação de Orçamento - ${formData.name}`;
+    const emailBody = message.replace(/\*/g, ''); // Remove markdown do email
+    const mailtoLink = `mailto:tgcalistro@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Abrir WhatsApp
+    window.open(whatsappLink, '_blank');
+    
+    // Abrir cliente de email
+    setTimeout(() => {
+      window.location.href = mailtoLink;
+    }, 500);
+
     toast({
-      title: "Solicitação enviada!",
-      description: "Em breve entraremos em contato com você.",
+      title: "Redirecionando...",
+      description: "Você será direcionado para o WhatsApp e seu cliente de email.",
     });
 
     // Reset form
