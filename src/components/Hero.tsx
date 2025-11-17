@@ -17,12 +17,10 @@ export const Hero = ({
       
       <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0" />
       
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 z-10" style={{ paddingTop: '50px', paddingBottom: '50px' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6 px-6 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-            <span className="text-primary-foreground font-medium">
-              Sites a partir de R$ 1.500 em 12x sem juros
-            </span>
+          <div className="inline-block mb-6 px-6 py-2 bg-destaque shadow-primary backdrop-blur-sm rounded-full border border-primary/30 text-destaque-foreground">
+            <span className="font-regular">Sites a partir de</span> <span className="font-bold">R$1.500</span> <span className="font-regular">em</span> <span className="font-bold">12x sem juros</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary-foreground leading-tight">
@@ -34,13 +32,13 @@ export const Hero = ({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button onClick={onQuoteClick} size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto shadow-primary">
+            <Button onClick={onQuoteClick} size="lg" className="bg-destaque text-destaque-foreground hover:bg-primary-hover text-lg px-8 py-6 h-auto shadow-primary">
               Solicitar Orçamento Grátis
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" onClick={() => document.getElementById('portfolio')?.scrollIntoView({
             behavior: 'smooth'
-          })} className="border-2 border-primary-foreground text-primary-foreground text-lg px-8 py-6 h-auto bg-transparent">
+          })} className="border-2 border-primary-foreground text-primary-foreground text-lg px-8 py-6 h-auto bg-transparent hover:bg-primary-hover/90">
               Ver Nossos Trabalhos
             </Button>
           </div>

@@ -17,9 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 214 100% 45%;
+    --primary: 0 100% 0%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 214 100% 35%;
+    --primary-hover: 244 26% 11%;
 
     --secondary: 0 0% 98%;
     --secondary-foreground: 0 0% 10%;
@@ -39,9 +39,12 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(214 100% 45%), hsl(214 100% 35%));
-    --gradient-hero: linear-gradient(to bottom right, hsl(214 100% 45%), hsl(214 100% 30%));
-    --shadow-primary: 0 10px 40px -10px hsl(214 100% 45% / 0.3);
+    --gradient-primary: linear-gradient(135deg, #212121, #212121);
+    --gradient-hero: linear-gradient(to bottom right, #212121, #212121);
+    --shadow-primary: 0 10px 40px -10px rgba(33, 33, 33, 0.3);
+
+    --destaque: 241, 100%, 55%;
+    --destaque-foreground: 0 0% 100%;
   }
 
   .dark {
@@ -56,7 +59,7 @@ All colors MUST be HSL.
 
     --primary: 214 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 214 100% 40%;
+    --primary-hover: 244 26% 11%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;

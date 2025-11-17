@@ -15,7 +15,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TCN Digital
+              <img src="../../public/logo.png" alt="TCN Digital logo" width="200px"/>
             </h1>
           </div>
 
@@ -32,7 +32,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
           </nav>
 
           <div className="hidden md:block">
-            <Button onClick={onQuoteClick} size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-primary">
+            <Button onClick={onQuoteClick} size="lg" className="bg-destaque hover:bg-primary-hover text-primary-foreground shadow-primary">
               Solicitar Orçamento
             </Button>
           </div>
