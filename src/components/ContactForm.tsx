@@ -153,6 +153,8 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                         <SelectItem value="landing">Landing Page focada em conversão</SelectItem>
                         <SelectItem value="website">Site completo com blog</SelectItem>
                         <SelectItem value="system">Desenvolvimento de sistema personalizado</SelectItem>
+                        <SelectItem value="bot">BOT de Atendimento</SelectItem>
+                        <SelectItem value="consultoria">Consultoria de Produto e Dados</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
