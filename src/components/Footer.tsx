@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-               <img src="../../public/logo-cinza.png" alt="TCN Digital logo" width="150px"/>
+               <img src="logo-cinza.png" alt="TCN Digital logo" width="150px"/>
             </h3>
             <p className="text-background/70 text-sm">
               Transformando ideias em experiências digitais únicas e impactantes.

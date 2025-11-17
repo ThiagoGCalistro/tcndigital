@@ -15,7 +15,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              <img src="../../public/logo.png" alt="TCN Digital logo" width="200px"/>
+              <img src="logo.png" alt="TCN Digital logo" width="200px"/>
             </h1>
           </div>
 
