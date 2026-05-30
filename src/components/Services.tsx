@@ -24,7 +24,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Landing Page */}
-          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in flex flex-col h-full" style={{ animationDelay: '0.1s' }}>
             <div className="bg-gradient-primary p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="flex items-center gap-3 mb-2 relative z-10">
@@ -38,7 +38,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-1">
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-sm text-muted-foreground">A partir de</span>
@@ -72,7 +72,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
 
               <Button 
                 onClick={onQuoteClick}
-                className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
                 size="lg"
               >
                 Solicitar Orçamento
@@ -82,7 +82,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
           </div>
 
           {/* Site Completo */}
-          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in flex flex-col h-full" style={{ animationDelay: '0.2s' }}>
             <div className="bg-gradient-primary p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="flex items-center gap-3 mb-2 relative z-10">
@@ -96,7 +96,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-1">
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-sm text-muted-foreground">A partir de</span>
@@ -130,7 +130,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
 
               <Button 
                 onClick={onQuoteClick}
-                className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
                 size="lg"
               >
                 Solicitar Orçamento
@@ -140,7 +140,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
           </div>
 
           {/* Consultoria de Produto e Dados */}
-          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in flex flex-col h-full" style={{ animationDelay: '0.4s' }}>
             <div className="bg-gradient-primary p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="flex items-center gap-3 mb-2 relative z-10">
@@ -154,7 +154,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-1">
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">Sob Consulta</span>
@@ -186,7 +186,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
 
               <Button 
                 onClick={onQuoteClick}
-                className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
                 size="lg"
               >
                 Solicitar Orçamento

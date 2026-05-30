@@ -1,6 +1,7 @@
 import noguchi from "@/assets/noguchi.png";
 import ravenro from "@/assets/ravenro.png";
 import marki from "@/assets/marki.jpeg";
+import moreiranoguchi from "@/assets/moreiranoguchi.png";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
@@ -28,6 +29,14 @@ const projects = [
     url: "https://marki.com.br/",
     tags: ["Tecnologia", "Web", "Sistema"],
   },
+  {
+    title: "Moreira Noguchi Advogados",
+    description: "Sistema completo com site institucional elegante e área de gestão para escritório de advocacia",
+    image: moreiranoguchi,
+    category: "Sistema Completo",
+    url: "https://moreiranoguchi.com.br/",
+    tags: ["Jurídico", "Site", "Sistema"],
+  },
 ];
 
 export const Portfolio = () => {
@@ -48,14 +57,14 @@ export const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-card rounded-2xl overflow-hidden border border-border shadow-card hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in"
+              className="group relative bg-card rounded-2xl overflow-hidden border border-border shadow-card hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in flex flex-col sm:flex-row"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video sm:aspect-auto sm:w-2/5 sm:shrink-0">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -74,13 +83,13 @@ export const Portfolio = () => {
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="inline-block px-3 py-1 bg-gradient-primary text-white text-sm rounded-full mb-3 shadow-sm">
+              <div className="p-6 flex flex-col flex-1">
+                <div className="inline-block px-3 py-1 bg-gradient-primary text-white text-sm rounded-full mb-3 shadow-sm self-start">
                   {project.category}
                 </div>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}

@@ -2,7 +2,7 @@ import { Building2 } from "lucide-react";
 
 const clients = [
   { name: "TechCorp Brasil", industry: "Tecnologia" },
-  { name: "Loja Virtual Plus", industry: "E-commerce" },
+  { name: "Moreira Noguchi", industry: "Jurídico" },
   { name: "Marki", industry: "Tecnologia" },
   { name: "Noguchi Advocacia", industry: "Jurídico" },
   { name: "RavenRO", industry: "Jogos" },

@@ -3,21 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Carlos Silva",
-    role: "CEO - TechCorp Brasil",
-    content: "A TCN Digital transformou completamente nossa presença online. O site ficou moderno, rápido e já aumentamos nossas conversões em 150%!",
+    name: "Lucas José",
+    role: "Fundador - Marki",
+    content: "A TCN Digital desenvolveu nosso sistema completo do zero. Plataforma robusta, rápida e exatamente do jeito que precisávamos. Parceria que recomendo de olhos fechados!",
     rating: 5,
   },
   {
-    name: "Maria Santos",
-    role: "Proprietária - Loja Virtual Plus",
-    content: "Profissionalismo do início ao fim. Entregaram o e-commerce antes do prazo e com qualidade excepcional. Recomendo de olhos fechados!",
+    name: "Rodrigo Azeredo",
+    role: "Administrador - RavenRO",
+    content: "Entregaram um painel de controle completo e estável para o nosso servidor de jogos. Suporte ágil e atenção aos detalhes do início ao fim. Resultado acima das expectativas!",
     rating: 5,
   },
   {
-    name: "João Oliveira",
-    role: "Diretor - Clínica Saúde+",
-    content: "Atendimento impecável e resultado além das expectativas. Nosso novo site tem gerado mais agendamentos do que imaginávamos.",
+    name: "Marcelo Noguchi",
+    role: "Diretor - Noguchi Advocacia",
+    content: "Profissionalismo impecável. Nosso novo site e sistema ficaram modernos e transmitem toda a credibilidade do escritório. Já notamos aumento no contato de novos clientes.",
     rating: 5,
   },
 ];
