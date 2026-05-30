@@ -1,0 +1,8 @@
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+
+# Artefatos locais
+wp-content/uploads/
+*.log

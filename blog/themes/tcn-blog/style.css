@@ -1,0 +1,15 @@
+/*
+Theme Name: TCN Blog
+Theme URI: https://tcndigital.com.br/blog
+Author: TCN Digital
+Author URI: https://tcndigital.com.br
+Description: Tema oficial do blog da TCN Digital, com a mesma identidade visual do site principal (Inter, gradiente azul, header/footer e cards).
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 8.0
+License: GPL-2.0-or-later
+Text Domain: tcn-blog
+*/
+
+/* O CSS de fato fica em assets/css/main.css (enfileirado no functions.php). */

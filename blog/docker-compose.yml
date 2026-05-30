@@ -1,0 +1,41 @@
+# Ambiente de DESENVOLVIMENTO LOCAL do blog.
+# NÃO usar em produção e NUNCA apontar para o banco de produção aqui.
+# Em produção, o serviço roda no EasyPanel conectando ao MariaDB existente (ver README).
+
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootlocal}
+      MYSQL_DATABASE: ${DB_NAME:-wordpress}
+      MYSQL_USER: ${DB_USER:-wp}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-wplocal}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${DB_NAME:-wordpress}
+      WORDPRESS_DB_USER: ${DB_USER:-wp}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD:-wplocal}
+      WORDPRESS_TABLE_PREFIX: ${DB_PREFIX:-wp_}
+      WORDPRESS_DEBUG: "1"
+      # URL do site principal usada nos links do tema.
+      TCN_MAIN_SITE: ${TCN_MAIN_SITE:-https://tcndigital.com.br}
+    volumes:
+      # Edição ao vivo do tema/mu-plugins durante o desenvolvimento.
+      - ./themes/tcn-blog:/var/www/html/wp-content/themes/tcn-blog
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins
+      - wp_uploads:/var/www/html/wp-content/uploads
+
+volumes:
+  db_data:
+  wp_uploads:

@@ -64,6 +64,10 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
               Sobre
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
+            <a href="/blog" className="hover:text-accent transition-all duration-300 relative group">
+              Blog
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
             <button onClick={() => goToSection('depoimentos')} className="hover:text-accent transition-all duration-300 relative group">
               Depoimentos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
@@ -124,6 +128,12 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
               >
                 Sobre
               </Link>
+              <a
+                href="/blog"
+                className="text-foreground hover:text-accent transition-colors"
+              >
+                Blog
+              </a>
               <button
                 className="text-left text-foreground hover:text-accent transition-colors"
                 onClick={() => goToSection('depoimentos')}
