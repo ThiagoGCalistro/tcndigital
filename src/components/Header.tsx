@@ -64,7 +64,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
               Sobre
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <a href="/blog" className="hover:text-accent transition-all duration-300 relative group">
+            <a href="https://blog.tcndigital.com.br" className="hover:text-accent transition-all duration-300 relative group">
               Blog
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -129,7 +129,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
                 Sobre
               </Link>
               <a
-                href="/blog"
+                href="https://blog.tcndigital.com.br"
                 className="text-foreground hover:text-accent transition-colors"
               >
                 Blog
