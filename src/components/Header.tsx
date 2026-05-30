@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   onQuoteClick: () => void;
@@ -9,6 +10,8 @@ interface HeaderProps {
 export const Header = ({ onQuoteClick }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +20,18 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const goToSection = (id: string) => {
+    setMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -27,32 +42,36 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center animate-fade-in-left">
-            <h1 className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold">
               <img src="logo.png" alt="TCN Digital logo" width="200px" className={`transition-transform duration-300 hover:scale-105 ${
-      scrolled 
-        ? '' 
+      scrolled
+        ? ''
         : 'brightness-0 invert'
     }`}/>
-            </h1>
+            </Link>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8 animate-fade-in">
-            <a href="#servicos" className="hover:text-accent transition-all duration-300 relative group">
+            <button onClick={() => goToSection('servicos')} className="hover:text-accent transition-all duration-300 relative group">
               Serviços
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#portfolio" className="hover:text-accent transition-all duration-300 relative group">
+            </button>
+            <button onClick={() => goToSection('portfolio')} className="hover:text-accent transition-all duration-300 relative group">
               Portfólio
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#depoimentos" className="hover:text-accent transition-all duration-300 relative group">
+            </button>
+            <Link to="/sobre" className="hover:text-accent transition-all duration-300 relative group">
+              Sobre
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <button onClick={() => goToSection('depoimentos')} className="hover:text-accent transition-all duration-300 relative group">
               Depoimentos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#contato" className="hover:text-accent transition-all duration-300 relative group">
+            </button>
+            <button onClick={() => goToSection('contato')} className="hover:text-accent transition-all duration-300 relative group">
               Contato
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </button>
           </nav>
 
           <div className="hidden md:block animate-fade-in-right">
@@ -86,34 +105,37 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
         : 'bg-secondary'
         }`}>
             <nav className="flex flex-col space-y-4">
-              <a
-                href="#servicos"
-                className="text-foreground hover:text-accent transition-colors"
-                onClick={() => setMenuOpen(false)}
+              <button
+                className="text-left text-foreground hover:text-accent transition-colors"
+                onClick={() => goToSection('servicos')}
               >
                 Serviços
-              </a>
-              <a
-                href="#portfolio"
-                className="text-foreground hover:text-accent transition-colors"
-                onClick={() => setMenuOpen(false)}
+              </button>
+              <button
+                className="text-left text-foreground hover:text-accent transition-colors"
+                onClick={() => goToSection('portfolio')}
               >
                 Portfólio
-              </a>
-              <a
-                href="#depoimentos"
+              </button>
+              <Link
+                to="/sobre"
                 className="text-foreground hover:text-accent transition-colors"
                 onClick={() => setMenuOpen(false)}
+              >
+                Sobre
+              </Link>
+              <button
+                className="text-left text-foreground hover:text-accent transition-colors"
+                onClick={() => goToSection('depoimentos')}
               >
                 Depoimentos
-              </a>
-              <a
-                href="#contato"
-                className="text-foreground hover:text-accent transition-colors"
-                onClick={() => setMenuOpen(false)}
+              </button>
+              <button
+                className="text-left text-foreground hover:text-accent transition-colors"
+                onClick={() => goToSection('contato')}
               >
                 Contato
-              </a>
+              </button>
               <Button onClick={onQuoteClick} className="bg-gradient-primary hover:shadow-glow text-primary-foreground">
                 Solicitar Orçamento
               </Button>

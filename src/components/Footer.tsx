@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -31,7 +32,7 @@ export const Footer = () => {
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h4 className="font-semibold mb-4 text-accent">Empresa</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sobre Nós</a></li>
+              <li><Link to="/sobre" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sobre Nós</Link></li>
               <li><a href="#portfolio" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Portfólio</a></li>
               <li><a href="#depoimentos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Depoimentos</a></li>
               <li><a href="#contato" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Contato</a></li>
