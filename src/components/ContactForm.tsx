@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Mail, Phone, MapPin, ShieldCheck, Clock, Users, Star } from "lucide-react";
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -104,7 +104,7 @@ ${formData.references || "Nenhuma referência fornecida"}`;
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="bg-card p-8 rounded-lg border border-border shadow-lg space-y-6">
+              <form onSubmit={handleSubmit} className="bg-card p-8 rounded-2xl border border-border shadow-card space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nome Completo *</Label>
@@ -153,7 +153,6 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                         <SelectItem value="landing">Landing Page focada em conversão</SelectItem>
                         <SelectItem value="website">Site completo com blog</SelectItem>
                         <SelectItem value="system">Desenvolvimento de sistema personalizado</SelectItem>
-                        <SelectItem value="bot">BOT de Atendimento</SelectItem>
                         <SelectItem value="consultoria">Consultoria de Produto e Dados</SelectItem>
                       </SelectContent>
                     </Select>
@@ -214,7 +213,7 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                 </div>
 
                 <div className="pt-4">
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
+                  <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-[1.02]">
                     <Send className="mr-2 h-5 w-5" />
                     Enviar Solicitação
                   </Button>
@@ -226,39 +225,92 @@ ${formData.references || "Nenhuma referência fornecida"}`;
             </div>
 
             <div className="space-y-6">
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
+              {/* Informações de Contato */}
+              <div className="bg-card p-6 rounded-2xl border border-border shadow-card">
+                <h3 className="text-xl font-bold mb-5">Informações de Contato</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-primary mt-1" />
+                  <div className="flex items-center gap-4 group">
+                    <div className="p-3 bg-gradient-primary rounded-xl shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+                      <Mail className="h-5 w-5 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium">E-mail</p>
+                      <p className="font-semibold text-sm">E-mail</p>
                       <p className="text-sm text-muted-foreground">contato@tcndigital.com.br</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-primary mt-1" />
+                  <div className="flex items-center gap-4 group">
+                    <div className="p-3 bg-gradient-primary rounded-xl shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+                      <Phone className="h-5 w-5 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium">Telefone</p>
+                      <p className="font-semibold text-sm">Telefone</p>
                       <p className="text-sm text-muted-foreground">(14) 99706-2245</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-primary mt-1" />
+                  <div className="flex items-center gap-4 group">
+                    <div className="p-3 bg-gradient-primary rounded-xl shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+                      <MapPin className="h-5 w-5 text-white" />
+                    </div>
                     <div>
-                      <p className="font-medium">Endereço</p>
+                      <p className="font-semibold text-sm">Endereço</p>
                       <p className="text-sm text-muted-foreground">Piraju, SP - Brasil</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-primary/10 p-6 rounded-lg border border-primary/20">
-                <h3 className="text-lg font-bold mb-2 text-primary">Resposta Rápida</h3>
-                <p className="text-sm text-foreground">
-                  Respondemos todas as solicitações em até 24 horas úteis, contato via WhatsApp.
+              {/* Prova Social */}
+              <div className="bg-card p-6 rounded-2xl border border-border shadow-card">
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-3">
+                    {["MK", "RR", "NG", "MN"].map((initials, i) => (
+                      <div
+                        key={i}
+                        className="w-11 h-11 rounded-full bg-gradient-primary border-2 border-card flex items-center justify-center text-white text-xs font-bold shadow-sm"
+                      >
+                        {initials}
+                      </div>
+                    ))}
+                    <div className="w-11 h-11 rounded-full bg-muted border-2 border-card flex items-center justify-center text-foreground text-xs font-bold shadow-sm">
+                      +
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex gap-0.5 mb-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                      ))}
+                    </div>
+                    <p className="font-bold text-sm leading-tight">Clientes satisfeitos</p>
+                    <p className="text-xs text-muted-foreground">Projetos entregues com excelência</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Selos de Confiança */}
+              <div className="bg-card p-6 rounded-2xl border border-border shadow-card space-y-4">
+                <div className="flex items-center gap-3">
+                  <ShieldCheck className="h-5 w-5 text-accent shrink-0" />
+                  <p className="text-sm text-foreground">Atendimento personalizado e seguro</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="h-5 w-5 text-accent shrink-0" />
+                  <p className="text-sm text-foreground">Resposta em até 24 horas úteis</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Users className="h-5 w-5 text-accent shrink-0" />
+                  <p className="text-sm text-foreground">Especialistas dedicados ao seu projeto</p>
+                </div>
+              </div>
+
+              {/* Resposta Rápida */}
+              <div className="relative overflow-hidden bg-gradient-primary p-6 rounded-2xl shadow-glow">
+                <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                <h3 className="text-lg font-bold mb-2 text-white relative z-10">Resposta Rápida</h3>
+                <p className="text-sm text-white/90 relative z-10">
+                  Respondemos todas as solicitações em até 24 horas úteis, com contato direto via WhatsApp.
                 </p>
               </div>
             </div>

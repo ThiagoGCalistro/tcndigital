@@ -24,7 +24,6 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Landing Pages</a></li>
               <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sites Corporativos</a></li>
-              <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">BOT de Atendimento</a></li>
               <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Consultoria</a></li>
             </ul>
           </div>
