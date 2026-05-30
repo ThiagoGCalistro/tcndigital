@@ -34,6 +34,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li><Link to="/sobre" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sobre Nós</Link></li>
               <li><Link to="/criacao-de-sites" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Criação de Sites na Região</Link></li>
+              <li><Link to="/sites-para" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sites por Segmento</Link></li>
               <li><a href="https://blog.tcndigital.com.br" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Blog</a></li>
               <li><a href="#portfolio" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Portfólio</a></li>
               <li><a href="#depoimentos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Depoimentos</a></li>

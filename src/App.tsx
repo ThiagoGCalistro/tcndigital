@@ -13,12 +13,15 @@ import ServicoDetalhe from "./pages/ServicoDetalhe";
 import ServicoCidade from "./pages/ServicoCidade";
 import CriacaoDeSites from "./pages/CriacaoDeSites";
 import CriacaoDeSiteCidade from "./pages/CriacaoDeSiteCidade";
+import SitesPara from "./pages/SitesPara";
+import NichoDetalhe from "./pages/NichoDetalhe";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
 import CondicoesGeraisDeUso from "./pages/CondicoesGeraisDeUso";
 import NotFound from "./pages/NotFound";
 
 import { services } from "@/data/services";
 import { cities } from "@/data/cities";
+import { niches } from "@/data/niches";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +62,12 @@ export const routes: RouteRecord[] = [
         path: "criacao-de-site-em/:cidade",
         Component: CriacaoDeSiteCidade,
         getStaticPaths: () => cities.map((city) => `/criacao-de-site-em/${city.slug}`),
+      },
+      { path: "sites-para", Component: SitesPara },
+      {
+        path: "sites-para/:nicho",
+        Component: NichoDetalhe,
+        getStaticPaths: () => niches.map((niche) => `/sites-para/${niche.slug}`),
       },
       { path: "politica-de-privacidade", Component: PoliticaDePrivacidade },
       { path: "condicoes-gerais-de-uso", Component: CondicoesGeraisDeUso },

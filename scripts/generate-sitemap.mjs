@@ -27,6 +27,24 @@ const citySlugs = [
 
 const serviceSlugs = ["landing-page", "desenvolvimento-de-site", "consultoria-de-produto-e-dados"];
 
+const nicheSlugs = [
+  "advogados",
+  "medicos",
+  "dentistas",
+  "psicologos",
+  "nutricionistas",
+  "contadores",
+  "arquitetos",
+  "imobiliarias",
+  "restaurantes",
+  "saloes-de-beleza",
+  "academias",
+  "veterinarios",
+  "construtoras",
+  "oficinas",
+  "profissionais-liberais",
+];
+
 const urls = [];
 const add = (path, priority, changefreq = "monthly") =>
   urls.push({ loc: `${SITE_URL}${path}`, priority, changefreq });
@@ -37,6 +55,8 @@ add("/sobre", "0.7");
 serviceSlugs.forEach((s) => add(`/servicos/${s}`, "0.8"));
 citySlugs.forEach((c) => add(`/criacao-de-site-em/${c}`, c === "piraju" ? "0.9" : "0.7"));
 serviceSlugs.forEach((s) => citySlugs.forEach((c) => add(`/servicos/${s}/${c}`, "0.6")));
+add("/sites-para", "0.8");
+nicheSlugs.forEach((n) => add(`/sites-para/${n}`, "0.8"));
 add("/politica-de-privacidade", "0.3", "yearly");
 add("/condicoes-gerais-de-uso", "0.3", "yearly");
 
