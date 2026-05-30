@@ -12,6 +12,7 @@ import {
 import {
   MapPin,
   ArrowRight,
+  Check,
   Search,
   Smartphone,
   TrendingUp,
@@ -96,7 +97,7 @@ const CriacaoDeSiteCidade = () => {
         title={`Criação de Sites em ${city.name} - SP | TCN Digital`}
         description={`Criação de sites, landing pages e sistemas em ${city.name} e região. Design profissional, otimização para o Google e foco em resultados. Solicite seu orçamento com a TCN Digital!`}
         path={`/criacao-de-site-em/${city.slug}`}
-        keywords={`criação de site em ${city.name}, criar site ${city.name}, desenvolvimento de sites ${city.name}, landing page ${city.name}, site profissional ${city.name}`}
+        keywords={`criação de site em ${city.name}, criar site em ${city.name}, desenvolvimento de sites em ${city.name}, agência de criação de sites ${city.name}, empresa de criação de sites ${city.name}, landing page ${city.name}, loja virtual ${city.name}, site para empresa ${city.name}, quanto custa um site em ${city.name}, site profissional ${city.name}, desenvolvedor de sites ${city.name}`}
         jsonLd={[
           {
             "@context": "https://schema.org",
@@ -195,6 +196,55 @@ const CriacaoDeSiteCidade = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Soluções (conteúdo otimizado para termos relacionados) */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Criação e desenvolvimento de sites em{" "}
+                <span className="text-gradient">{city.name}</span>
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Procurando uma agência para criar o site da sua empresa em {city.name}? A TCN Digital
+                oferece soluções completas de presença digital, do site institucional à landing page
+                que vende.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                `Criação de sites institucionais em ${city.name}`,
+                `Landing pages de alta conversão em ${city.name}`,
+                `Desenvolvimento de sistemas web sob medida`,
+                `Sites institucionais e blogs para a sua marca`,
+                `Sites responsivos e otimizados para o Google`,
+                `Sites para empresas, profissionais e comércios`,
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-card border border-border rounded-xl shadow-card p-4"
+                >
+                  <div className="p-1 bg-accent/10 rounded-full shrink-0">
+                    <Check className="h-4 w-4 text-accent" />
+                  </div>
+                  <span className="text-foreground font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mt-10">
+              Seja para criar um site do zero ou reformular o seu site atual, a TCN Digital atende
+              empresas, profissionais liberais e comércios de {city.name} e de toda a região com
+              criação de sites, desenvolvimento web, landing pages e sistemas personalizados,
+              incluindo lojas virtuais sob demanda. Todos os projetos são modernos, rápidos e
+              pensados para que o seu negócio seja encontrado no Google por quem procura os seus
+              produtos e serviços.
+            </p>
           </div>
         </div>
       </section>
