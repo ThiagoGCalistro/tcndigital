@@ -81,8 +81,8 @@ export const About = ({ onQuoteClick }: AboutProps) => {
               </p>
               <p>
                 Começamos enxergando uma necessidade real: empreendedores, profissionais
-                liberais e empresas locais que tinham ótimos produtos e serviços, mas pouca
-                — ou nenhuma — presença online estruturada. Foi aí que decidimos colocar a mão
+                liberais e empresas locais que tinham ótimos produtos e serviços, mas quase
+                nenhuma presença online estruturada. Foi aí que decidimos colocar a mão
                 na massa e construir landing pages que convertem, sites institucionais que
                 transmitem credibilidade e sistemas completos que organizam e impulsionam o
                 dia a dia de quem confia no nosso trabalho.
@@ -93,13 +93,13 @@ export const About = ({ onQuoteClick }: AboutProps) => {
                 o contexto de cada negócio e desenhamos soluções pensadas para gerar resultado
                 de verdade. Já desenvolvemos sistemas completos para escritórios de advocacia,
                 plataformas de gestão para servidores de jogos e ferramentas digitais para
-                empresas de tecnologia — sempre com a mesma dedicação.
+                empresas de tecnologia, sempre com a mesma dedicação.
               </p>
               <p>
                 Hoje, a TCN Digital é mais do que uma desenvolvedora de sites. Somos parceiros
                 estratégicos na jornada digital dos nossos clientes, comprometidos em transformar
                 ideias em experiências únicas, modernas e que realmente fazem a diferença.
-                Esse é o nosso jeito de trabalhar — e é assim que construímos cada história junto
+                Esse é o nosso jeito de trabalhar. E é assim que construímos cada história junto
                 com você.
               </p>
             </div>

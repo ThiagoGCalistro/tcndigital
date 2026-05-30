@@ -25,7 +25,7 @@ const PoliticaDePrivacidade = () => {
           Paulo, valoriza a sua privacidade e está comprometida com a proteção dos seus dados
           pessoais. Esta Política de Privacidade explica, de forma transparente, quais dados
           coletamos, como os utilizamos e quais são os seus direitos, em conformidade com a Lei
-          nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD).
+          nº 13.709/2018, a Lei Geral de Proteção de Dados Pessoais (LGPD).
         </p>
         <p>
           Ao navegar em nosso site e utilizar nossos serviços, você declara estar ciente e de

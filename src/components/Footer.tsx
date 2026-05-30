@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="animate-fade-in">
             <h3 className="text-2xl font-bold mb-4">
-               <img src="logo-cinza.png" alt="TCN Digital - Agência de criação de sites em Piraju" width="150" height="36" loading="lazy" className="brightness-0 invert"/>
+               <img src="/logo-cinza.png" alt="TCN Digital - Agência de criação de sites em Piraju" width="150" height="36" loading="lazy" className="brightness-0 invert"/>
             </h3>
             <p className="text-primary-foreground/70 text-sm">
               Transformando ideias em experiências digitais únicas e impactantes.

@@ -10,7 +10,7 @@ export const cities: City[] = [
     slug: "piraju",
     name: "Piraju",
     intro:
-      "Sede da TCN Digital, Piraju é a nossa casa. Conhecemos de perto o comércio, os profissionais e as empresas da cidade — e ajudamos cada um a marcar presença na internet com sites que realmente convertem.",
+      "Sede da TCN Digital, Piraju é a nossa casa. Conhecemos de perto o comércio, os profissionais e as empresas da cidade, e ajudamos cada um a marcar presença na internet com sites que realmente convertem.",
   },
   {
     slug: "manduri",
@@ -28,7 +28,7 @@ export const cities: City[] = [
     slug: "ourinhos",
     name: "Ourinhos",
     intro:
-      "Ourinhos concentra um comércio forte e competitivo. Um site bem feito é o que diferencia a sua empresa da concorrência — e é exatamente isso que a TCN Digital entrega.",
+      "Ourinhos concentra um comércio forte e competitivo. Um site bem feito é o que diferencia a sua empresa da concorrência, e é exatamente isso que a TCN Digital entrega.",
   },
   {
     slug: "cerqueira-cesar",

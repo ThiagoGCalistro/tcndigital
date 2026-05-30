@@ -60,7 +60,7 @@ export const services: ServiceDetail[] = [
     priceNote: "Em até 12x sem juros",
     intro: [
       "Uma landing page é uma página única, objetiva e estratégica, criada com um propósito claro: converter visitantes em clientes, leads ou inscrições. Diferente de um site institucional, ela elimina distrações e guia o visitante para uma única ação.",
-      "Na TCN Digital, desenhamos cada landing page com foco total em performance e conversão — do título à chamada para ação, cada elemento é pensado para gerar resultado. Ideal para lançamentos, captação de leads, campanhas de tráfego pago e divulgação de produtos ou serviços específicos.",
+      "Na TCN Digital, desenhamos cada landing page com foco total em performance e conversão. Do título à chamada para ação, cada elemento é pensado para gerar resultado. Ideal para lançamentos, captação de leads, campanhas de tráfego pago e divulgação de produtos ou serviços específicos.",
     ],
     includes: [
       "Design responsivo e moderno",
@@ -82,7 +82,7 @@ export const services: ServiceDetail[] = [
         icon: Zap,
         title: "Carregamento veloz",
         description:
-          "Páginas leves e otimizadas que carregam em segundos — fundamental para não perder visitantes e melhorar o SEO.",
+          "Páginas leves e otimizadas que carregam em segundos, o que é fundamental para não perder visitantes e melhorar o SEO.",
       },
       {
         icon: Search,
@@ -146,7 +146,7 @@ export const services: ServiceDetail[] = [
     priceLabel: "A partir de",
     priceNote: "Em até 12x sem juros",
     intro: [
-      "Um site institucional completo é a base da presença digital da sua empresa. Ele transmite credibilidade, apresenta seus serviços e produtos com profundidade e funciona como o seu cartão de visitas online — disponível 24 horas por dia.",
+      "Um site institucional completo é a base da presença digital da sua empresa. Ele transmite credibilidade, apresenta seus serviços e produtos com profundidade e funciona como o seu cartão de visitas online, disponível 24 horas por dia.",
       "Desenvolvemos sites com múltiplas páginas, blog integrado e funcionalidades avançadas, ideais para empresas que querem uma presença digital robusta, profissional e preparada para crescer junto com o negócio.",
     ],
     includes: [
@@ -232,7 +232,7 @@ export const services: ServiceDetail[] = [
     price: "Sob Consulta",
     priceNote: "Valores personalizados por projeto",
     intro: [
-      "Nem todo desafio se resolve apenas com um site. Às vezes, o que o seu negócio precisa é de estratégia: entender os dados, otimizar produtos digitais e tomar decisões baseadas em informação — e não em achismo.",
+      "Nem todo desafio se resolve apenas com um site. Às vezes, o que o seu negócio precisa é de estratégia: entender os dados, otimizar produtos digitais e tomar decisões baseadas em informação, e não em achismo.",
       "Nossa consultoria de produto e dados ajuda empresas a criar e aprimorar produtos digitais, estruturar métricas, montar dashboards e construir estratégias de crescimento sustentáveis. Da concepção à implementação, transformamos a sua visão em resultados mensuráveis.",
     ],
     includes: [
@@ -306,7 +306,7 @@ export const services: ServiceDetail[] = [
       {
         question: "Vocês implementam ou só orientam?",
         answer:
-          "Os dois. Podemos atuar de forma consultiva, recomendando caminhos, ou colocar a mão na massa na implementação — como você preferir.",
+          "Os dois. Podemos atuar de forma consultiva, recomendando caminhos, ou colocar a mão na massa na implementação, como você preferir.",
       },
     ],
   },

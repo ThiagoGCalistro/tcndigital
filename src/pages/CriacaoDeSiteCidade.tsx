@@ -26,7 +26,7 @@ const reasons = [
     icon: Search,
     title: "Seja encontrado no Google",
     description:
-      "Quando alguém procura pelo seu serviço, é o seu site que precisa aparecer — não o do concorrente.",
+      "Quando alguém procura pelo seu serviço, é o seu site que precisa aparecer, não o do concorrente.",
   },
   {
     icon: Smartphone,
@@ -72,7 +72,7 @@ const CriacaoDeSiteCidade = () => {
     {
       question: `Quanto custa criar um site em ${city.name}?`,
       answer:
-        "As landing pages começam em R$ 1.500 e os sites institucionais completos a partir de R$ 2.000, em até 12x sem juros. O valor final depende do escopo — solicite um orçamento sem compromisso.",
+        "As landing pages começam em R$ 1.500 e os sites institucionais completos a partir de R$ 2.000, em até 12x sem juros. O valor final depende do escopo, então solicite um orçamento sem compromisso.",
     },
     {
       question: `A TCN Digital atende empresas de ${city.name} presencialmente?`,
@@ -182,8 +182,8 @@ const CriacaoDeSiteCidade = () => {
             </p>
             <p>
               Atendemos comércios, profissionais liberais, prestadores de serviço e empresas de
-              todos os portes — sempre com atendimento próximo e propostas sob medida. Você cuida do
-              seu negócio; nós cuidamos da sua presença digital.
+              todos os portes, sempre com atendimento próximo e propostas sob medida. Você cuida do
+              seu negócio e nós cuidamos da sua presença digital.
             </p>
             <div className="pt-2">
               <Button

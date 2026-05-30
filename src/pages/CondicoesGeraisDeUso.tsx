@@ -25,8 +25,8 @@ const CondicoesGeraisDeUso = () => {
 
       <LegalSection title="2. Objeto">
         <p>
-          O site tem como finalidade apresentar os serviços da TCN Digital — como desenvolvimento
-          de sites, landing pages, sistemas personalizados e consultoria — além de permitir o
+          O site tem como finalidade apresentar os serviços da TCN Digital, como desenvolvimento
+          de sites, landing pages, sistemas personalizados e consultoria, além de permitir o
           contato e a solicitação de orçamentos. As informações aqui disponibilizadas têm caráter
           informativo e não constituem oferta vinculante.
         </p>
@@ -47,7 +47,7 @@ const CondicoesGeraisDeUso = () => {
 
       <LegalSection title="4. Propriedade intelectual">
         <p>
-          Todo o conteúdo do site — incluindo textos, imagens, logotipos, marcas, layout e código —
+          Todo o conteúdo do site, incluindo textos, imagens, logotipos, marcas, layout e código,
           é de propriedade da TCN Digital ou de seus licenciadores, sendo protegido pela legislação
           de propriedade intelectual. É proibida a reprodução, distribuição ou modificação sem
           autorização prévia e por escrito.
