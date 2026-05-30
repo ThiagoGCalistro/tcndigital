@@ -43,7 +43,7 @@ export const Header = ({ onQuoteClick }: HeaderProps) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center animate-fade-in-left">
             <Link to="/" className="text-2xl font-bold">
-              <img src="logo.png" alt="TCN Digital logo" width="200px" className={`transition-transform duration-300 hover:scale-105 ${
+              <img src="logo.png" alt="TCN Digital - Criação de Sites em Piraju e Região" width="200" height="48" className={`transition-transform duration-300 hover:scale-105 ${
       scrolled
         ? ''
         : 'brightness-0 invert'

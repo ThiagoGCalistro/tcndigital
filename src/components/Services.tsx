@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Check, BarChart3, ArrowRight, Smartphone, Globe } from "lucide-react";
 
 interface ServicesProps {
@@ -70,14 +71,22 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
                 ))}
               </div>
 
-              <Button 
-                onClick={onQuoteClick}
-                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
-                size="lg"
-              >
-                Solicitar Orçamento
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="mt-auto space-y-3">
+                <Button
+                  onClick={onQuoteClick}
+                  className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                  size="lg"
+                >
+                  Solicitar Orçamento
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full">
+                  <Link to="/servicos/landing-page">
+                    Entenda
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -128,14 +137,22 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
                 ))}
               </div>
 
-              <Button 
-                onClick={onQuoteClick}
-                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
-                size="lg"
-              >
-                Solicitar Orçamento
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="mt-auto space-y-3">
+                <Button
+                  onClick={onQuoteClick}
+                  className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                  size="lg"
+                >
+                  Solicitar Orçamento
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full">
+                  <Link to="/servicos/desenvolvimento-de-site">
+                    Entenda
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -184,14 +201,22 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
                 ))}
               </div>
 
-              <Button 
-                onClick={onQuoteClick}
-                className="w-full mt-auto bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
-                size="lg"
-              >
-                Solicitar Orçamento
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="mt-auto space-y-3">
+                <Button
+                  onClick={onQuoteClick}
+                  className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
+                  size="lg"
+                >
+                  Solicitar Orçamento
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full">
+                  <Link to="/servicos/consultoria-de-produto-e-dados">
+                    Entenda
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

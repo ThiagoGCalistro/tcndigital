@@ -1,25 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TCN Digital - Agência de Desenvolvimento Web</title>
-    <meta name="description" content="Criamos sites profissionais, landing pages de alta conversão e sistemas web personalizados. Sites a partir de R$ 1.500 em 12x sem juros." />
-    <meta name="author" content="Lovable" />
+    <meta name="author" content="TCN Digital" />
+    <!-- title, description, canonical, Open Graph e Twitter são definidos por página via componente Seo (vite-react-ssg Head) -->
 
-    <meta property="og:title" content="46c6c92d-e20b-4cbf-bbc3-b5745d81ed4a" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Dados estruturados base (presentes em todas as páginas) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://www.tcndigital.com.br/#organization",
+      "name": "TCN Digital",
+      "url": "https://www.tcndigital.com.br/",
+      "email": "contato@tcndigital.com.br",
+      "telephone": "+55-14-99706-2245",
+      "image": "https://www.tcndigital.com.br/logo.png",
+      "logo": "https://www.tcndigital.com.br/logo.png",
+      "priceRange": "$$",
+      "description": "Criação de sites profissionais, landing pages de alta conversão e sistemas web personalizados, com atendimento remoto para Piraju e região.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Piraju",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Piraju" },
+        { "@type": "City", "name": "Manduri" },
+        { "@type": "City", "name": "Avaré" },
+        { "@type": "City", "name": "Ourinhos" },
+        { "@type": "City", "name": "Cerqueira César" },
+        { "@type": "City", "name": "Taquarituba" },
+        { "@type": "City", "name": "Santa Cruz do Rio Pardo" }
+      ]
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Consent Mode v2 - padrão negado até consentimento (LGPD) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <!-- End Google Consent Mode -->
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

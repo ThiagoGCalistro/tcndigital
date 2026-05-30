@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="animate-fade-in">
             <h3 className="text-2xl font-bold mb-4">
-               <img src="logo-cinza.png" alt="TCN Digital logo" width="150px" className="brightness-0 invert"/>
+               <img src="logo-cinza.png" alt="TCN Digital - Agência de criação de sites em Piraju" width="150" height="36" loading="lazy" className="brightness-0 invert"/>
             </h3>
             <p className="text-primary-foreground/70 text-sm">
               Transformando ideias em experiências digitais únicas e impactantes.
@@ -23,9 +23,9 @@ export const Footer = () => {
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <h4 className="font-semibold mb-4 text-accent">Serviços</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Landing Pages</a></li>
-              <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sites Corporativos</a></li>
-              <li><a href="#servicos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Consultoria</a></li>
+              <li><Link to="/servicos/landing-page" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Landing Pages</Link></li>
+              <li><Link to="/servicos/desenvolvimento-de-site" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sites Corporativos</Link></li>
+              <li><Link to="/servicos/consultoria-de-produto-e-dados" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Consultoria</Link></li>
             </ul>
           </div>
 
@@ -33,6 +33,7 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4 text-accent">Empresa</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li><Link to="/sobre" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Sobre Nós</Link></li>
+              <li><Link to="/criacao-de-sites" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Criação de Sites na Região</Link></li>
               <li><a href="#portfolio" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Portfólio</a></li>
               <li><a href="#depoimentos" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Depoimentos</a></li>
               <li><a href="#contato" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Contato</a></li>
@@ -58,8 +59,22 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
+        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
           <p>&copy; {new Date().getFullYear()} TCN Digital. Todos os direitos reservados.</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link to="/politica-de-privacidade" className="hover:text-accent transition-colors">
+              Política de Privacidade
+            </Link>
+            <Link to="/condicoes-gerais-de-uso" className="hover:text-accent transition-colors">
+              Condições Gerais de Uso
+            </Link>
+            <button
+              onClick={() => window.dispatchEvent(new Event("open-cookie-preferences"))}
+              className="hover:text-accent transition-colors"
+            >
+              Preferências de cookies
+            </button>
+          </div>
         </div>
       </div>
     </footer>

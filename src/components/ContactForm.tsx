@@ -254,8 +254,18 @@ ${formData.references || "Nenhuma referência fornecida"}`;
                       <MapPin className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">Endereço</p>
-                      <p className="text-sm text-muted-foreground">Piraju, SP - Brasil</p>
+                      <p className="font-semibold text-sm">Atendimento</p>
+                      <p className="text-sm text-muted-foreground">Remoto · Piraju e região - SP</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 group">
+                    <div className="p-3 bg-gradient-primary rounded-xl shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+                      <Clock className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm">Horário</p>
+                      <p className="text-sm text-muted-foreground">Seg a Sex · 9h às 18h</p>
                     </div>
                   </div>
                 </div>
