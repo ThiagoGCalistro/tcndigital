@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Bot, BarChart3, ArrowRight, Smartphone, Globe } from "lucide-react";
+import { Check, BarChart3, ArrowRight, Smartphone, Globe } from "lucide-react";
 
 interface ServicesProps {
   onQuoteClick: () => void;
@@ -22,7 +22,7 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Landing Page */}
           <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="bg-gradient-primary p-6 relative overflow-hidden">
@@ -120,63 +120,6 @@ export const Services = ({ onQuoteClick }: ServicesProps) => {
                   "Painel administrativo",
                   "SEO avançado otimizado",
                   "Integração com redes sociais"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3 group">
-                    <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm text-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Button 
-                onClick={onQuoteClick}
-                className="w-full bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300 hover:scale-105"
-                size="lg"
-              >
-                Solicitar Orçamento
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* BOT de Atendimento */}
-          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="bg-gradient-primary p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-              <div className="flex items-center gap-3 mb-2 relative z-10">
-                <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
-                  <Bot className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">BOT de Atendimento</h3>
-                  <p className="text-white/80 text-sm">Automação Inteligente</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6">
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">R$ 300</span>
-                  <span className="text-muted-foreground">/mês</span>
-                </div>
-                <p className="text-sm text-muted-foreground">+ Taxa de implementação única</p>
-              </div>
-
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Transforme seu atendimento com nosso BOT inteligente. Qualifique leads automaticamente, 
-                responda perguntas frequentes 24/7 e aumente suas vendas com atendimento instantâneo. 
-                Integração completa com WhatsApp e principais plataformas.
-              </p>
-
-              <div className="space-y-3 mb-8">
-                {[
-                  "Atendimento 24/7 automatizado",
-                  "Qualificação inteligente de leads",
-                  "Integração com WhatsApp e redes sociais",
-                  "Respostas personalizadas por IA",
-                  "Dashboard com métricas e relatórios",
-                  "Suporte técnico contínuo"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-3 group">
                     <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />

@@ -3,9 +3,9 @@ import { Building2 } from "lucide-react";
 const clients = [
   { name: "TechCorp Brasil", industry: "Tecnologia" },
   { name: "Loja Virtual Plus", industry: "E-commerce" },
-  { name: "Clínica Saúde+", industry: "Saúde" },
-  { name: "Advocacia Moderna", industry: "Jurídico" },
-  { name: "Restaurante Sabor", industry: "Alimentação" },
+  { name: "Marki", industry: "Tecnologia" },
+  { name: "Noguchi Advocacia", industry: "Jurídico" },
+  { name: "RavenRO", industry: "Jogos" },
   { name: "Academia FitLife", industry: "Fitness" },
 ];
 

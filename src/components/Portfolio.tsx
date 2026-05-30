@@ -1,29 +1,32 @@
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import noguchi from "@/assets/noguchi.png";
+import ravenro from "@/assets/ravenro.png";
+import marki from "@/assets/marki.jpeg";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce ModaStyle",
-    description: "Loja virtual completa com sistema de pagamentos integrado e painel administrativo",
-    image: portfolio1,
-    category: "E-commerce",
-    tags: ["React", "Node.js", "Stripe"],
+    title: "Noguchi Advocacia",
+    description: "Sistema completo com site institucional moderno e área de gestão para escritório de advocacia",
+    image: noguchi,
+    category: "Sistema Completo",
+    url: "https://noguchi.com.br/NOVOSITE/",
+    tags: ["Jurídico", "Site", "Sistema"],
   },
   {
-    title: "Landing Page ConvertPro",
-    description: "Landing page de alta conversão para empresa de marketing digital",
-    image: portfolio2,
-    category: "Landing Page",
-    tags: ["React", "Tailwind", "SEO"],
+    title: "RavenRO",
+    description: "Sistema completo com painel de controle e plataforma de gerenciamento para servidor de jogos",
+    image: ravenro,
+    category: "Sistema Completo",
+    url: "https://cp.ravenro.com.br/",
+    tags: ["Jogos", "Painel", "Sistema"],
   },
   {
-    title: "Site Corporativo TechSolutions",
-    description: "Website institucional moderno para empresa de tecnologia",
-    image: portfolio3,
-    category: "Site Corporativo",
-    tags: ["React", "Blog", "CMS"],
+    title: "Marki",
+    description: "Sistema completo com plataforma web e soluções digitais para empresa de tecnologia",
+    image: marki,
+    category: "Sistema Completo",
+    url: "https://marki.com.br/",
+    tags: ["Tecnologia", "Web", "Sistema"],
   },
 ];
 
@@ -59,10 +62,15 @@ export const Portfolio = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-                  <button className="flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground rounded-xl hover:shadow-glow transition-all duration-300 hover:scale-105">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground rounded-xl hover:shadow-glow transition-all duration-300 hover:scale-105"
+                  >
                     Ver Projeto
                     <ExternalLink className="h-4 w-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
