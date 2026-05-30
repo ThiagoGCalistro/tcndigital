@@ -5,6 +5,7 @@ import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
 import { CTA } from "@/components/CTA";
 import { Testimonials } from "@/components/Testimonials";
+import { BlogSection } from "@/components/BlogSection";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { Seo } from "@/components/Seo";
@@ -36,6 +37,7 @@ const Index = () => {
       <Portfolio />
       <CTA onQuoteClick={scrollToContact} />
       <Testimonials />
+      <BlogSection />
       <ContactForm />
       <Footer />
     </div>;

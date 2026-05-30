@@ -28,7 +28,7 @@ export const Seo = ({
   jsonLd,
 }: SeoProps) => {
   const url = path ? `${SITE_URL}${path}` : SITE_URL;
-  const ogImage = image || `${SITE_URL}/logo.png`;
+  const ogImage = image || `${SITE_URL}/TCNDigital.png`;
   const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
