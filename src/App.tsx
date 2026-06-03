@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { MarkiTracking } from "@/components/MarkiTracking";
 
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
@@ -31,6 +32,7 @@ const Layout = () => (
       <Toaster />
       <Sonner />
       <ScrollToTop />
+      <MarkiTracking />
       <Outlet />
       <CookieConsent />
     </TooltipProvider>

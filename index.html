@@ -79,5 +79,38 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Marki Tracker -->
+    <script>
+    (function(w,d){
+      w.marki={_sid:(Math.random().toString(36)+'0000000').slice(2,10)};
+      var _e='https://app.marki.com.br/api/webhooks/web-tracking/56b75d7dd9e3d6939b68d07052b62c9901b0eee6a8ad3b8f';
+      // Captura UTMs da URL e persiste em sessionStorage (sobrevive navegação)
+      function getUtms(){
+        var p=new URLSearchParams(d.location.search),s={};
+        try{s=JSON.parse(sessionStorage.getItem('_mk_utms')||'{}');}catch(e){}
+        var u={};
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(function(k){if(p.get(k))u[k]=p.get(k);});
+        var m=Object.assign({},s,u);
+        if(Object.keys(m).length)try{sessionStorage.setItem('_mk_utms',JSON.stringify(m));}catch(e){}
+        return m;
+      }
+      function send(p,b){fetch(_e+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b),keepalive:true}).catch(function(){});}
+      w.marki.pageview=function(){send('/event',{type:'web.page_view',url:d.location.href,title:d.title,ref:d.referrer,sid:w.marki._sid,utms:getUtms()});};
+      w.marki.identify=function(c){send('/identify',Object.assign({},c,{url:d.location.href,sid:w.marki._sid,utms:getUtms()}));};
+      w.marki.track=function(ev,p){send('/event',{type:'web.'+ev,url:d.location.href,sid:w.marki._sid,utms:getUtms(),data:p||{}});};
+      w.marki.pageview();
+      d.addEventListener('submit',function(e){
+        var f=e.target,em=null,nm=null,ph=null;
+        [].forEach.call(f.elements,function(el){
+          var n=(el.name||el.id||'').toLowerCase();
+          if(el.type==='email'||n.indexOf('email')>-1)em=el.value;
+          if(n.indexOf('name')>-1||n.indexOf('nome')>-1)nm=el.value;
+          if(el.type==='tel'||n.indexOf('fone')>-1||n.indexOf('phone')>-1||n.indexOf('celular')>-1||n.indexOf('whatsapp')>-1)ph=el.value;
+        });
+        if(em||ph)w.marki.identify({email:em,name:nm,phone:ph});
+      },true);
+    })(window,document);
+    </script>
   </body>
 </html>
